@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:rawinpornweb/pages/home_page.dart';
+import 'package:rawinpornweb/utility/my_assets.dart';
 import 'package:rawinpornweb/utility/my_style.dart';
 import 'package:rawinpornweb/widget/show_app_name.dart';
 import 'package:rawinpornweb/widget/show_logo.dart';
@@ -48,19 +49,31 @@ class _MainStateState extends State<MainState> {
               children: [
                 TextButton(
                   onPressed: () {},
-                  child: Text('Home',style: MyStyle().h3Link(),),
+                  child: Text(
+                    'Home',
+                    style: MyStyle().h3Link(),
+                  ),
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: Text('About Me',style: MyStyle().h3Link(),),
+                  child: Text(
+                    'About Me',
+                    style: MyStyle().h3Link(),
+                  ),
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: Text('Product',style: MyStyle().h3Link(),),
+                  child: Text(
+                    'Product',
+                    style: MyStyle().h3Link(),
+                  ),
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: Text('Content',style: MyStyle().h3Link(),),
+                  child: Text(
+                    'Content',
+                    style: MyStyle().h3Link(),
+                  ),
                 ),
               ],
             ),
@@ -92,7 +105,10 @@ class _MainStateState extends State<MainState> {
             items: menus
                 .map(
                   (e) => DropdownMenuItem(
-                    child: Text(e,style: MyStyle().h3Link(),),
+                    child: Text(
+                      e,
+                      style: MyStyle().h3Link(),
+                    ),
                     value: e,
                   ),
                 )
@@ -114,12 +130,18 @@ class _MainStateState extends State<MainState> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(MyAssets.wallpaper),
+            fit: BoxFit.cover,
+          ),
+        ),
         alignment: Alignment.topCenter,
         padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
         child: ConstrainedBox(
           constraints: BoxConstraints(maxWidth: 1200),
           child: Container(
-            child: Column(
+            child: ListView(
               children: [
                 buildMainNavigator(),
                 current,
