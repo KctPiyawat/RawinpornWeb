@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rawinpornweb/widget/call_to_action.dart';
 import 'package:rawinpornweb/widget/show_content.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -20,8 +21,7 @@ class HomePage extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              color: Colors.orange,
-              child: Text('This is Call To Acction'),
+              child: CallToAction(),
             ),
           ),
         ],
@@ -36,8 +36,8 @@ Widget buildMobile() => Column(
         ),
         Container(
           width: 600,
-          color: Colors.orange,
-          child: Text('This is Call To Acction'),
+          
+          child: CallToAction(),
         ),
       ],
     );
