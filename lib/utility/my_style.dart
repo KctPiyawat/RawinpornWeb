@@ -23,6 +23,11 @@ class MyStyle {
         fontWeight: FontWeight.w700,
         color: blue,
       );
+  TextStyle h3TitleNormal() => TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.normal,
+        color: blue,
+      );
 
   TextStyle h3Link() => TextStyle(
         fontSize: 14,

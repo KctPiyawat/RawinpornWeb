@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget buildDesktop() => Row(
+  Widget buildDesktop() => Row(crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             width: 600,
@@ -36,7 +36,6 @@ Widget buildMobile() => Column(
         ),
         Container(
           width: 600,
-          
           child: CallToAction(),
         ),
       ],
